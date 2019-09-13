@@ -4,9 +4,11 @@ import StarWars from './components/StarWars';
 import './App.css';
 
 const starwarsApi = 'https://swapi.co/api/people/'; 
+console.log(starwarsApi); 
 
 const App = () => {
   const [starwarsData, setstarwarsData] = useState({});
+  console.log(starwarsData); 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -29,8 +31,8 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
       <StarWars 
         Name={starwarsData.name}
-        Image={starwarsData.url}
         Gender={starwarsData.gender}
+        Image={starwarsData.url}
       />
     </div>
   );
