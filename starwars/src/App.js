@@ -29,13 +29,29 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      {starwarsData.results.map(
+        (starwarsItem) => (
       <StarWars 
         Name={starwarsData.name}
         Gender={starwarsData.gender}
         Image={starwarsData.url}
       />
+  ))
+      }
     </div>
   );
+
+  // {
+  //   items.map(
+  //     (itemName) => (
+  //       <ItemDisplay
+  //         key={itemName}
+  //         name={itemName}
+  //         action={addToCart}
+  //         isBold={true}
+  //       />
+  //     ))
+  // }
 
 }
 
