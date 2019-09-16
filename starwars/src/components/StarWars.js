@@ -1,12 +1,12 @@
 import React from 'react';
 
 function StarWars(props) {
-  const { name, addToApp } = props;
+  const { name } = props;
   return (
     <div>
       <p>{props.Name}</p>
-      <img src = {props.Image}/>
-      <p>{props.Gender}</p>
+      {/* <img src = {props.Image}/> */}
+      {/* <p>{props.Gender}</p> */}
     </div>
   );
 }
