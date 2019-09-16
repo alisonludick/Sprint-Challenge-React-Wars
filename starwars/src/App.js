@@ -7,7 +7,7 @@ const starwarsApi = 'https://swapi.co/api/people/';
 // console.log(starwarsApi); 
 
 const App = () => {
-  const [starwarsData, setstarwarsData] = useState({});
+  const [starwarsData, setstarwarsData] = useState([]);
   // console.log(starwarsData); 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -15,8 +15,8 @@ const App = () => {
   useEffect(() => {
     axios.get(starwarsApi)
       .then(response => {
-        console.log(response.data); 
-        setstarwarsData(response.data);
+        setstarwarsData(response.data.results);
+        console.log(response.data.results); 
       })
       .catch(error => {
         console.log("PROBLEMS!")
@@ -30,12 +30,13 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {starwarsData.results.map(
+      {starwarsData.map(
         (starwarsItem) => (
       <StarWars 
+        key={starwarsItem.name}
         Name={starwarsItem.name}
-        // Gender={starwarsData.gender}
-        // Image={starwarsData.url}
+        Gender={starwarsItem.gender}
+        Birth={starwarsItem.birth_year}
       />
   ))
       }
