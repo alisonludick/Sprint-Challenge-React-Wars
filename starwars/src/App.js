@@ -43,18 +43,6 @@ const App = () => {
     </div>
   );
 
-  // {
-  //   items.map(
-  //     (itemName) => (
-  //       <ItemDisplay
-  //         key={itemName}
-  //         name={itemName}
-  //         action={addToCart}
-  //         isBold={true}
-  //       />
-  //     ))
-  // }
-
 }
 
 export default App;
