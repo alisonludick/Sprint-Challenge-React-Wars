@@ -1,10 +1,9 @@
 import React from "react";
 import "./StarWars.css";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const StarWarsCharacter = ({
   name,
+  birthYear,
   gender,
   height,
   mass,
@@ -17,18 +16,14 @@ const StarWarsCharacter = ({
 }) => {
     const style = {
         display: select.includes(url) ?'block':'none',
-
-    }
-    const starStyle = {
-        color: select.includes(url)? 'brown':'black',
     }
   return (
     <div className="character" onClick={() => change(url)} >
       <div className='character-name'>
       <h2>{name}</h2>
-      <FontAwesomeIcon  style={starStyle} icon={faStar} />
       </div>
       <div className="character-details" style={style}>
+        <p>Birth Year: {birthYear}</p>
         <p>Gender: {gender}</p>
         <p>Height: {height}</p>
         <p>Mass: {mass}</p>
