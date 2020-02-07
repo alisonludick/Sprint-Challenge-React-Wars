@@ -6,9 +6,11 @@
     margin:5% 10%;
 }
 .characterList h1{
-    color:black;
+    color:#443e3e;
+    text-shadow: 1px 1px 5px #fff;
 }
 .character-name{
+    text-shadow: 1px 1px 5px #fff;
     display:flex;
     justify-content:space-evenly;
     align-items: center;
@@ -17,7 +19,7 @@
     width:85%;
 }
 .initial{
-    background-image: url('./loading.gif');
+    background-image: url('./loading2.gif');
     background-color: inherit;
     opacity:.5;
     border-radius:50%;
@@ -36,24 +38,26 @@
     display:flex;
     flex-direction:column;
     background-color:inherit;
+    align-self: center;
     margin:2% 15%;
     padding-bottom:1%;
-    width:70%;
+    width:45%;
     border:1px solid black;
-    border-radius:10px;
-    background-color: rgba(205, 134, 63, 0.486);
+    border-radius:5px;
+    text-shadow: 1px 1px 5px #fff;
+    background-color: rgba(66, 63, 66, 0.486);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 }
 .character-details{
-    background-color:rgba(255, 217, 0, 0.26);
+    background-color:rgba(241, 195, 239, 0.1);
     width: 80%;
     margin: 1% 10%;
     padding:3% 0%;
-    margin-bottom:0;
-    border-radius:0% 0% 10% 10%;
+    border-radius:60%;
 }
 .character p{
-    color:black;
+    color:#443e3e;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
 }
 .character a{
     text-decoration:none;
@@ -64,11 +68,12 @@
     height:3vw;
     border-radius: 10px;
     color:white;
-    background-color: peru;
+    background-color: rgba(56, 150, 68, 0.45);
     margin-right:5%;
     outline:none;
-
+    align-items: center;
 }
+
 @media (max-width:600px){
     .button{
         height:5vw;

@@ -19,6 +19,7 @@ const StarWarsList = ({ list  , nextPage , previousPage,next ,previous,onToggle,
         <Characters 
           key={todo.url}
           name={todo.name}
+          birthYear={todo.birth_year}
           gender={todo.gender}
           height={todo.height}
           mass={todo.mass}
