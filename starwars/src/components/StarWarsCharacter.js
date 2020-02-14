@@ -1,37 +1,25 @@
-import React from "react";
-import "./StarWars.css";
+import React from 'react';
 
-const StarWarsCharacter = ({
-  name,
-  birthYear,
-  gender,
-  height,
-  mass,
-  eyeColor,
-  hairColor,
-  skinColor,
-  change,
-  url,
-  select
-}) => {
-    const style = {
-        display: select.includes(url) ?'block':'none',
-    }
-  return (
-    <div className="character" onClick={() => change(url)} >
-      <div className='character-name'>
-      <h2>{name}</h2>
-      </div>
-      <div className="character-details" style={style}>
-        <p>Birth Year: {birthYear}</p>
-        <p>Gender: {gender}</p>
-        <p>Height: {height}</p>
-        <p>Mass: {mass}</p>
-        <p>Eye Color: {eyeColor}</p>
-        <p>Hair Color: {hairColor}</p>
-        <p>Skin Color: {skinColor}</p>
-      </div>
-    </div>
-  );
-};
+const StarWarsCharacter = ({ data }) => {
+	return (
+		<div className="person">
+			<h2>{data.name}</h2>
+      {
+        data.birth_year !== 'n/a' && data.birth_year !== 'unknown' ?
+        <p><b>Birth Year:</b> {data.birth_year}</p> : null
+      }
+			<p><b>Height:</b> {data.height}</p>
+			{
+				data.hair_color !== 'n/a' && data.hair_color !== 'none' ? 
+					<p><b>Hair Color:</b> {data.hair_color}</p> : null 
+			}
+			<p><b>Eye Color:</b> {data.eye_color}</p>
+			{
+				data.gender !== 'n/a' && data.gender !== 'none' ? 
+					<p><b>Gender:</b> {data.gender}</p> : null 
+			}
+		</div>
+	)
+}
+
 export default StarWarsCharacter;
