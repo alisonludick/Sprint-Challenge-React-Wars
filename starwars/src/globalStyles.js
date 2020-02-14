@@ -15,6 +15,13 @@ export const GlobalStyles = createGlobalStyle`
         background-image: url(${image});
 		background-size: cover;
 	}
+	.person {
+		@media (max-width: 600px) {
+        	width:10%;
+        	margin: 5%;
+    	}
+	}
+
 	.header {
 		text-align: center;
 		padding: 50px 50px 25px;

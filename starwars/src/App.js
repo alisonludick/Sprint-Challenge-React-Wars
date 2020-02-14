@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "./App.css";
 import axios from "axios";
 import StarWarsList from './components/StarWarsList';
 import styled from "styled-components";
@@ -17,13 +16,17 @@ const People = styled.div`
 		padding: 20px;
 		background-color: rgba(255,255,255, .65);
 		h2 {
-      color: salmon;
-      text-shadow: 1px 1px darkgrey; 
+      		color: salmon;
+      		text-shadow: 1px 1px darkgrey; 
 			margin-bottom: 10px;
 		}
 		p {
 			line-height: 1.5rem;
 		}
+		@media only screen and (max-width: 600px) {
+			max-width: calc(100% - 5px);
+			flex-basis: calc(100% - 20px); 	
+    	}
 	}
 `;
 
@@ -65,3 +68,22 @@ const App = () => {
 }
 
 export default App;
+
+/* 
+
+@media (max-width: 600px){
+    .characterList{
+        width:90%;
+        margin:5%;
+    }
+    .character{
+        width:90%;
+        margin:2% 5%;
+    }
+}
+
+.column {
+    width: 100%;
+  }
+
+*/
